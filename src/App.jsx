@@ -41,9 +41,9 @@ function App() {
 
     return (
         <>
-            <p className="text-center text-gray-800 text-5xl">Countries & Territories Data</p>
+            <p className="text-gray-800 text-5xl">Countries & Territories Data</p>
             <select
-                className="text-lg rounded-md"
+                className="text-lg rounded-md mt-3 text-center p-1"
                 onChange={getCountryValue}
                 value={selectedCountry.name?.common || ''}
             >
@@ -70,20 +70,32 @@ function App() {
                     </p>
                     <p className="mt-2 text-3xl">{selectedCountry[0].name.common} | {selectedCountry[0].cca2}</p>
                     <p className="text-xl">{selectedCountry[0].name.official}</p>
-                    <table className="w-full border-collapse mt-2">
-                        <tbody>
-                                <tr>
-                                    <td className="border p-2 text-left bg-gray-200">Capital:</td>
-                                    <td className="border p-2 text-left">{selectedCountry[0].capital}</td>
-                                </tr>
-                                <tr>
-                                    <td className="border p-2 text-left bg-gray-200">Population:</td>
-                                    <td className="border p-2 text-left">{selectedCountry[0].population}</td>
-                                </tr>
-                                <tr>
-                                    <td className="border p-2 text-left bg-gray-200">Internet TLD:</td>
-                                    <td className="border p-2 text-left">{selectedCountry[0].tld}</td>
-                                </tr>
+                    <table className="w-full mt-2">
+                        <tbody className="text-left">
+                            <tr className="border-b border-gray-300">
+                                <td className="p-2 bg-gray-200">Region:</td>
+                                <td className="p-2">{selectedCountry[0].region}</td>
+                            </tr>
+                            <tr className="border-b border-gray-300">
+                                <td className="p-2 bg-gray-200">Capital:</td>
+                                <td className="p-2">{selectedCountry[0].capital}</td>
+                            </tr>
+                            <tr className="border-b border-gray-300">
+                                <td className="p-2 bg-gray-200">Population:</td>
+                                <td className="p-2">{selectedCountry[0].population}</td>
+                            </tr>
+                            <tr className="border-b border-gray-300">
+                                <td className="p-2 bg-gray-200">Independent:</td>
+                                <td className="p-2">{selectedCountry[0].independent.toString()}</td>
+                            </tr>
+                            <tr className="border-b border-gray-300">
+                                <td className="p-2 bg-gray-200">Internet TLD:</td>
+                                <td className="p-2">{selectedCountry[0].tld}</td>
+                            </tr>
+                            <tr>
+                                <td className="p-2 bg-gray-200">Latitude, Longitude:</td>
+                                <td className="p-2">{selectedCountry[0].latlng[0]}, {selectedCountry[0].latlng[1]}</td>
+                            </tr>
                         </tbody>
                     </table>
                     <a href={selectedCountry[0].maps.openStreetMaps} target="_blank">
