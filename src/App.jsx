@@ -41,7 +41,7 @@ function App() {
 
     return (
         <>
-            <h1 className="text-center text-gray-800">Countries & Territories Data</h1>
+            <p className="text-center text-gray-800 text-5xl">Countries & Territories Data</p>
             <select
                 className="text-lg rounded-md"
                 onChange={getCountryValue}
@@ -60,31 +60,35 @@ function App() {
             )}
 
             {selectedCountry.length > 0 && !isLoading && (
-                <div className="text-center mt-20">
+                <div className="text-center mt-5">
                     <p>
                         <img
-                            style={{ height: '12rem' }}
+                            className="h-48 mx-auto"
                             src={selectedCountry[0].flags.svg}
                             alt={`${selectedCountry[0].name.common} Flag`}
                         />
                     </p>
-                    <h3>{selectedCountry[0].name.common} | {selectedCountry[0].cca2}</h3>
-                    <p>{selectedCountry[0].name.official}</p>
-                    <table className="w-full border-collapse">
-                        <tr className="bg-gray-200">
-                            <td className="border p-2 text-left">Capital:</td>
-                            <td className="border p-2 text-left">{selectedCountry[0].capital}</td>
-                        </tr>
-                        <tr>
-                            <td className="border p-2 text-left bg-gray-200">Population:</td>
-                            <td className="border p-2 text-left">{selectedCountry[0].population}</td>
-                        </tr>
-                        <tr>
-                            <td className="border p-2 text-left bg-gray-200">Internet TLD:</td>
-                            <td className="border p-2 text-left">{selectedCountry[0].tld}</td>
-                        </tr>
+                    <p className="mt-2 text-3xl">{selectedCountry[0].name.common} | {selectedCountry[0].cca2}</p>
+                    <p className="text-xl">{selectedCountry[0].name.official}</p>
+                    <table className="w-full border-collapse mt-2">
+                        <tbody>
+                                <tr>
+                                    <td className="border p-2 text-left bg-gray-200">Capital:</td>
+                                    <td className="border p-2 text-left">{selectedCountry[0].capital}</td>
+                                </tr>
+                                <tr>
+                                    <td className="border p-2 text-left bg-gray-200">Population:</td>
+                                    <td className="border p-2 text-left">{selectedCountry[0].population}</td>
+                                </tr>
+                                <tr>
+                                    <td className="border p-2 text-left bg-gray-200">Internet TLD:</td>
+                                    <td className="border p-2 text-left">{selectedCountry[0].tld}</td>
+                                </tr>
+                        </tbody>
                     </table>
-                    <a href={selectedCountry[0].maps.openStreetMaps} target="_blank" rel="noopener noreferrer">View on map</a>
+                    <a href={selectedCountry[0].maps.openStreetMaps} target="_blank">
+                        <p className="mt-2">View on map🔗</p>
+                    </a>
                 </div>
             )}
         </>
