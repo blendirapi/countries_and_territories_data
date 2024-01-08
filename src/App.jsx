@@ -73,28 +73,28 @@ function App() {
                     <table className="w-full mt-2">
                         <tbody className="text-left">
                             <tr className="border-b border-gray-300">
-                                <td className="p-2 bg-gray-200">Region:</td>
-                                <td className="p-2">{selectedCountry[0].region}</td>
+                                <td className="w-1/2 p-2 bg-gray-200">Region:</td>
+                                <td className="w-1/2 p-2">{selectedCountry[0].region}</td>
                             </tr>
                             <tr className="border-b border-gray-300">
-                                <td className="p-2 bg-gray-200">Capital:</td>
-                                <td className="p-2">{selectedCountry[0].capital}</td>
+                                <td className="w-1/2 p-2 bg-gray-200">Capital:</td>
+                                <td className="w-1/2 p-2">{selectedCountry[0].capital}</td>
                             </tr>
                             <tr className="border-b border-gray-300">
-                                <td className="p-2 bg-gray-200">Population:</td>
-                                <td className="p-2">{selectedCountry[0].population}</td>
+                                <td className="w-1/2 p-2 bg-gray-200">Population:</td>
+                                <td className="w-1/2 p-2">{selectedCountry[0].population}</td>
                             </tr>
                             <tr className="border-b border-gray-300">
-                                <td className="p-2 bg-gray-200">Independent:</td>
-                                <td className="p-2">{selectedCountry[0].independent.toString()}</td>
+                                <td className="w-1/2 p-2 bg-gray-200">Independent:</td>
+                                <td className="w-1/2 p-2">{selectedCountry[0].independent.toString()}</td>
                             </tr>
                             <tr className="border-b border-gray-300">
-                                <td className="p-2 bg-gray-200">Internet TLD:</td>
-                                <td className="p-2">{selectedCountry[0].tld}</td>
+                                <td className="w-1/2 p-2 bg-gray-200">Internet TLD:</td>
+                                <td className="w-1/2 p-2">{selectedCountry[0].tld}</td>
                             </tr>
                             <tr>
-                                <td className="p-2 bg-gray-200">Latitude, Longitude:</td>
-                                <td className="p-2">{selectedCountry[0].latlng[0]}, {selectedCountry[0].latlng[1]}</td>
+                                <td className="w-1/2 p-2 bg-gray-200">Latitude, Longitude:</td>
+                                <td className="w-1/2 p-2">{selectedCountry[0].latlng[0]}, {selectedCountry[0].latlng[1]}</td>
                             </tr>
                         </tbody>
                     </table>
